@@ -15,7 +15,7 @@
         "copper_text_upright": false,
         "courtyard_line_width": 0.05,
         "dimension_precision": 4,
-        "dimension_units": 3,
+        "dimension_units": 2,
         "dimensions": {
           "arrow_length": 1270000,
           "extension_offset": 500000,
@@ -41,11 +41,11 @@
           "height": 1.27,
           "width": 2.54
         },
-        "silk_line_width": 0.1,
+        "silk_line_width": 0.0625,
         "silk_text_italic": false,
-        "silk_text_size_h": 1.0,
-        "silk_text_size_v": 1.0,
-        "silk_text_thickness": 0.1,
+        "silk_text_size_h": 0.5,
+        "silk_text_size_v": 0.5,
+        "silk_text_thickness": 0.0625,
         "silk_text_upright": false,
         "zones": {
           "min_clearance": 0.5
@@ -513,7 +513,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "gerber/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",

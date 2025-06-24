@@ -7,6 +7,10 @@
 	(title_block
 		(title "DC to DC Switching Converter")
 		(company "Teddy Kim")
+		(comment 1 "Trimming pot in para with R1")
+		(comment 2 "Change FB R's to 0.1% Tol")
+		(comment 3 "Calc curr of pins to sch")
+		(comment 4 "Calc Schematic")
 	)
 	(lib_symbols
 		(symbol "Alpha:MP2338GTL-Z"
@@ -1326,6 +1330,12 @@
 		(uuid "1c8ad1c8-b996-42c8-bed1-814ed974d236")
 	)
 	(junction
+		(at 146.05 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "31162f0f-27de-4208-8ae3-a5b5cf416a9b")
+	)
+	(junction
 		(at 36.83 35.56)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1441,16 +1451,6 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 76.2) (xy 146.05 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "15a61e89-7b33-421d-bfcc-3e764dc56369")
-	)
-	(wire
-		(pts
 			(xy 118.11 57.15) (xy 120.65 57.15)
 		)
 		(stroke
@@ -1521,7 +1521,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 76.2) (xy 168.91 76.2)
+			(xy 156.21 76.2) (xy 168.91 76.2)
 		)
 		(stroke
 			(width 0)
@@ -1581,7 +1581,7 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 76.2) (xy 154.94 76.2)
+			(xy 146.05 76.2) (xy 148.59 76.2)
 		)
 		(stroke
 			(width 0)
@@ -1691,7 +1691,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 76.2) (xy 121.92 76.2)
+			(xy 119.38 78.74) (xy 121.92 78.74)
 		)
 		(stroke
 			(width 0)
@@ -1701,7 +1701,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 76.2) (xy 119.38 66.04)
+			(xy 119.38 78.74) (xy 119.38 66.04)
 		)
 		(stroke
 			(width 0)
@@ -1748,6 +1748,16 @@
 			(type default)
 		)
 		(uuid "9f124395-0b57-4b6d-9282-8165b795ddd5")
+	)
+	(wire
+		(pts
+			(xy 146.05 78.74) (xy 146.05 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1b8dd5c-042a-43db-a1c8-e6c55901e6f5")
 	)
 	(wire
 		(pts
@@ -1811,7 +1821,7 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 76.2) (xy 146.05 81.28)
+			(xy 146.05 76.2) (xy 146.05 78.74)
 		)
 		(stroke
 			(width 0)
@@ -1878,6 +1888,16 @@
 			(type default)
 		)
 		(uuid "d5e49979-0f95-412c-afbe-58ee0fc69421")
+	)
+	(wire
+		(pts
+			(xy 129.54 78.74) (xy 146.05 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de3076b1-93ff-46b5-a062-3e06cf1051f4")
 	)
 	(wire
 		(pts
@@ -2158,9 +2178,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "1737f8ba-a780-428a-9ce6-c025b0262345")
-		(property "Reference" "R5"
+		(property "Reference" "R2"
 			(at 148.59 83.8199 0)
 			(effects
 				(font
@@ -2223,7 +2242,7 @@
 		(instances
 			(project "6-13-2025_BuckConverter"
 				(path "/54e59154-7579-4ec2-9e86-41ef422b853f"
-					(reference "R5")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -2258,7 +2277,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "AlphaF:screw terminal"
+		(property "Footprint" "AlphaF:TERM BLK 2POS SIDE ENTRY"
 			(at 181.61 48.26 0)
 			(effects
 				(font
@@ -2337,7 +2356,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "AlphaF:screw terminal"
+		(property "Footprint" "AlphaF:TERM BLK 2POS SIDE ENTRY"
 			(at 29.21 38.1 0)
 			(effects
 				(font
@@ -2551,7 +2570,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "53d6272e-9def-4b5f-9037-a7536510e03e")
-		(property "Reference" "R3"
+		(property "Reference" "R5"
 			(at 124.714 52.578 90)
 			(effects
 				(font
@@ -2612,7 +2631,7 @@
 		(instances
 			(project "6-13-2025_BuckConverter"
 				(path "/54e59154-7579-4ec2-9e86-41ef422b853f"
-					(reference "R3")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -2620,15 +2639,15 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 125.73 76.2 90)
+		(at 125.73 78.74 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "568ce570-40b9-4199-8de1-0828dcf3d66e")
-		(property "Reference" "R4"
-			(at 125.984 71.882 90)
+		(property "Reference" "RT1"
+			(at 125.984 74.422 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2636,7 +2655,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 125.984 73.914 90)
+			(at 125.984 76.454 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2644,7 +2663,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 125.73 77.978 90)
+			(at 125.73 80.518 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2653,7 +2672,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 125.73 76.2 0)
+			(at 125.73 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2662,7 +2681,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 125.73 76.2 0)
+			(at 125.73 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2671,7 +2690,7 @@
 			)
 		)
 		(property "ID" "P10KDACT-ND"
-			(at 125.73 76.2 90)
+			(at 125.73 78.74 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2688,7 +2707,7 @@
 		(instances
 			(project "6-13-2025_BuckConverter"
 				(path "/54e59154-7579-4ec2-9e86-41ef422b853f"
-					(reference "R4")
+					(reference "RT1")
 					(unit 1)
 				)
 			)
@@ -3130,15 +3149,15 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 158.75 76.2 90)
+		(at 152.4 76.2 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "b74d415c-6060-4162-8f40-bbccb1b62fe6")
-		(property "Reference" "R6"
-			(at 159.004 78.74 90)
+		(property "Reference" "R1"
+			(at 152.654 78.74 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3146,7 +3165,7 @@
 			)
 		)
 		(property "Value" "90.9k"
-			(at 159.004 73.914 90)
+			(at 152.654 73.914 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3154,7 +3173,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 158.75 77.978 90)
+			(at 152.4 77.978 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3163,7 +3182,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 158.75 76.2 0)
+			(at 152.4 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3172,7 +3191,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 158.75 76.2 0)
+			(at 152.4 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3181,7 +3200,7 @@
 			)
 		)
 		(property "ID" "P90.9KDACT-ND"
-			(at 158.75 76.2 90)
+			(at 152.4 76.2 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3198,7 +3217,7 @@
 		(instances
 			(project "6-13-2025_BuckConverter"
 				(path "/54e59154-7579-4ec2-9e86-41ef422b853f"
-					(reference "R6")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -3414,7 +3433,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d31a42b1-d6a0-4de7-9c5a-6f8534056190")
-		(property "Reference" "R2"
+		(property "Reference" "R4"
 			(at 45.72 52.0699 0)
 			(effects
 				(font
@@ -3477,7 +3496,7 @@
 		(instances
 			(project "6-13-2025_BuckConverter"
 				(path "/54e59154-7579-4ec2-9e86-41ef422b853f"
-					(reference "R2")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -3735,7 +3754,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "de140161-8e0d-4e9a-8d4c-cec6a9259040")
-		(property "Reference" "R1"
+		(property "Reference" "R3"
 			(at 45.72 40.6399 0)
 			(effects
 				(font
@@ -3798,7 +3817,7 @@
 		(instances
 			(project "6-13-2025_BuckConverter"
 				(path "/54e59154-7579-4ec2-9e86-41ef422b853f"
-					(reference "R1")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -3829,7 +3848,7 @@
 				)
 			)
 		)
-		(property "Footprint" "AlphaF:inductor"
+		(property "Footprint" "AlphaF:FIXED IND 6.8UH 4.5A"
 			(at 135.89 48.26 0)
 			(effects
 				(font
