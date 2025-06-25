@@ -11,6 +11,8 @@
 		(comment 2 "Change FB R's to 0.1% Tol")
 		(comment 3 "Calc curr of pins to sch")
 		(comment 4 "Calc Schematic")
+		(comment 5 "Sim schematic")
+		(comment 6 "trim pot with R1")
 	)
 	(lib_symbols
 		(symbol "Alpha:MP2338GTL-Z"
@@ -1336,12 +1338,6 @@
 		(uuid "31162f0f-27de-4208-8ae3-a5b5cf416a9b")
 	)
 	(junction
-		(at 36.83 35.56)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4393a0d8-b2d6-4dcb-a651-d3d3eab66ff7")
-	)
-	(junction
 		(at 140.97 48.26)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1382,6 +1378,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e37578f9-be24-4918-8252-1f0cb015d9e4")
+	)
+	(junction
+		(at 38.1 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f3de2699-56f0-4cce-8d24-6fefa49639bf")
 	)
 	(junction
 		(at 157.48 48.26)
@@ -1478,26 +1480,6 @@
 			(type default)
 		)
 		(uuid "200b78ed-16d9-4ce7-a7b1-f72b719c90fb")
-	)
-	(wire
-		(pts
-			(xy 34.29 35.56) (xy 36.83 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "23a47d0c-d2f8-4f74-840c-1e502e55dc22")
-	)
-	(wire
-		(pts
-			(xy 36.83 35.56) (xy 43.18 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "30771f5d-dfd0-4bde-a19c-1e57c79f7c70")
 	)
 	(wire
 		(pts
@@ -1611,6 +1593,16 @@
 	)
 	(wire
 		(pts
+			(xy 34.29 35.56) (xy 38.1 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6866b3df-bcb6-4b8f-95b2-57736c3bedeb")
+	)
+	(wire
+		(pts
 			(xy 175.26 50.8) (xy 175.26 57.15)
 		)
 		(stroke
@@ -1688,6 +1680,16 @@
 			(type default)
 		)
 		(uuid "827ce784-2bb3-4d51-ba94-ecffadc9475b")
+	)
+	(wire
+		(pts
+			(xy 38.1 35.56) (xy 43.18 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83766bfd-9efe-4891-b472-dcd4163e0253")
 	)
 	(wire
 		(pts
@@ -2936,72 +2938,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 36.83 35.56 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9ce5a0ec-4dd9-4734-a0da-dc67e1ed5b97")
-		(property "Reference" "#FLG01"
-			(at 36.83 33.655 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 36.83 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 36.83 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 36.83 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 36.83 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "85fe793a-a041-4076-b0bc-397134169825")
-		)
-		(instances
-			(project ""
-				(path "/54e59154-7579-4ec2-9e86-41ef422b853f"
-					(reference "#FLG01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 146.05 91.44 0)
 		(unit 1)
@@ -3351,6 +3287,72 @@
 			(project ""
 				(path "/54e59154-7579-4ec2-9e86-41ef422b853f"
 					(reference "#FLG02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 38.1 35.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c7a045e5-ca39-42a7-9359-cc9a146cd04f")
+		(property "Reference" "#FLG01"
+			(at 38.1 33.655 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 38.1 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 38.1 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 38.1 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 38.1 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5266b31a-5dac-408c-a1a2-33e9d35e35f6")
+		)
+		(instances
+			(project "6-13-2025_BuckConverter"
+				(path "/54e59154-7579-4ec2-9e86-41ef422b853f"
+					(reference "#FLG01")
 					(unit 1)
 				)
 			)
