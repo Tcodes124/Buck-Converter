@@ -74,7 +74,7 @@
 			(mirror no)
 			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "gerber/")
+			(outputdirectory "gerberFiles/")
 		)
 	)
 	(net 0 "")
@@ -1779,7 +1779,7 @@
 		(property "Reference" "J2"
 			(at -6.565 0.025 90)
 			(layer "F.SilkS")
-			(uuid "bf403f1a-f92c-4a2b-a53f-70af925848f4")
+			(uuid "50960133-8a71-4395-9ff9-b523d17b85b0")
 			(effects
 				(font
 					(size 1 1)
@@ -1787,10 +1787,10 @@
 				)
 			)
 		)
-		(property "Value" "5V 3A MAX"
+		(property "Value" "5V 3A"
 			(at 4.435 5.525 90)
 			(layer "F.SilkS")
-			(uuid "144e9bfc-5b2f-4330-a81c-d0defdc1645a")
+			(uuid "4d49b8cc-45d5-4d83-b921-36b6143bb3a2")
 			(effects
 				(font
 					(size 0.75 0.75)
@@ -1802,7 +1802,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "003bb7b5-49bb-4971-9165-57b2da38ba32")
+			(uuid "187894af-37d4-4745-a300-0f10b53015d8")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1814,7 +1814,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "6374f6ad-c202-4b4a-b9a9-f0def9d2eeef")
+			(uuid "f14e594a-9576-467d-b4d9-d77c137b6bad")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3063,7 +3063,7 @@
 		(property "Reference" "R1"
 			(at 2.38 0 90)
 			(layer "F.SilkS")
-			(uuid "806dcf91-ea19-436a-b81f-4498750c85ec")
+			(uuid "a748f6af-6889-4492-af45-3a0a90bf6343")
 			(effects
 				(font
 					(size 0.5 0.5)
@@ -3074,7 +3074,7 @@
 		(property "Value" "90.9k"
 			(at 0 1.65 90)
 			(layer "F.Fab")
-			(uuid "97ba1627-6f56-4f2e-a333-dc9425c73577")
+			(uuid "b1818193-1aae-449d-aa4f-4a7f2de8572f")
 			(effects
 				(font
 					(size 1 1)
@@ -3086,7 +3086,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "3291033b-643f-4322-bce1-2100fe5521f4")
+			(uuid "a7a27d27-f1d8-4862-b335-ccaffa194407")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3098,7 +3098,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "9da10c66-9c7f-4a5a-af63-e634aec86865")
+			(uuid "8964131d-c4a2-4a84-b7f1-c30602a13c02")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3438,21 +3438,6 @@
 			)
 		)
 	)
-	(gr_poly
-		(pts
-			(xy 140.75 54) (xy 140.75 55.25) (xy 139.25 56.75) (xy 138.25 56.75) (xy 138 56.5) (xy 138 56.25)
-			(xy 138 56) (xy 136.75 57.25) (xy 136.75 58.75) (xy 135.5 58.75) (xy 135 58.25) (xy 135 57.75) (xy 136.75 56)
-			(xy 136 55.25) (xy 135.25 55.25) (xy 135 55) (xy 136 54) (xy 139.25 54) (xy 139.75 54.5) (xy 140 54.25)
-			(xy 140 52.75) (xy 140.25 52.75) (xy 141.25 53.75) (xy 141 54)
-		)
-		(stroke
-			(width 0.0625)
-			(type solid)
-		)
-		(fill yes)
-		(layer "F.SilkS")
-		(uuid "9b68dc9c-8e45-4194-9e0c-08aaad6fbbd2")
-	)
 	(gr_line
 		(start 145.565 55.005)
 		(end 145.565 73.005)
@@ -3557,6 +3542,18 @@
 			(font
 				(size 1 1)
 				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "DC-DC Buck Converter\n"
+		(at 124.29 52.69 0)
+		(layer "F.SilkS")
+		(uuid "3736d47b-5be7-4508-aa64-30aa184c5ae5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.125)
 			)
 			(justify left bottom)
 		)
@@ -3720,7 +3717,7 @@
 		(uuid "1c91f094-5f28-4bcc-aeab-933464574db9")
 	)
 	(via
-		(at 113.725 54.915)
+		(at 113.96 54.915)
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
@@ -3801,7 +3798,7 @@
 		(uuid "7b2ec1bf-3492-47b8-a86e-02c4caaa7092")
 	)
 	(via
-		(at 112.605 54.905)
+		(at 112.84 54.905)
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
@@ -3927,7 +3924,7 @@
 		(uuid "fd557163-8815-4a2b-872a-84c6407c0553")
 	)
 	(via
-		(at 111.495 54.915)
+		(at 111.73 54.915)
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
